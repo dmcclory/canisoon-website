@@ -1,7 +1,7 @@
 const browserData = require('canisoon-lib')
 module.exports = function() {
 
-  const features = Object.values(browserData.dataset)
+  const features = Object.values(browserData.dataset).sort((a, b) => a.latestPercentage < b.latestPercentage ? 1 : -1 )
 
   return {
     optimal: features.filter(a => (a.latestPercentage > 70) && (a.latestPercentage < 90)),
