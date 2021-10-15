@@ -18,6 +18,7 @@
 	"devDependencies": {
 		"@11ty/eleventy": "^0.12.1",
 		"autoprefixer": "^10.3.1",
+		"canisoon-lib": "^0.1.2",
 		"del-cli": "^3.0.1",
 		"esbuild": "^0.12.15",
 		"html-minifier": "^4.0.0",
