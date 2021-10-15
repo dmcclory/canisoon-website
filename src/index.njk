@@ -9,27 +9,27 @@ description: Cool site
   	<h1 class="font-bold text-xl mb-2 py-4">canisoon</span></h1>
     <h2 class="text-lg mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
     <p>features that are supported by 70 to 90% of all browsers<p>
-    <ul>
+    <div class="grid grid-cols-3 gap-4">
       {% for item in simpleFeatures.optimal %}
-      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      <div>{{ item.name }} ({{item.latestPercentage}})</div>
       {% endfor %}
-    </ul>
+    </div>
 
     <h2 class="text-lg mb-2">😎 Upcoming browser that are pretty well established</h2>
     <p>features that are supported by 90%+ of all browsers<p>
-    <ul>
+    <div class="grid grid-cols-3 gap-4">
       {% for item in simpleFeatures.tooLate %}
-      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      <div>{{ item.name }} ({{item.latestPercentage}})</div>
       {% endfor %}
-    </ul>
+    </div>
 
     <h2 class="text-lg mb-2">🥱 Features that are still cooking.</h2>
     <p>features that are supported by less than 70% of all browsers<p>
-    <ul>
+    <div class="grid grid-cols-3 gap-4">
       {% for item in simpleFeatures.tooEarly %}
-      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      <div>{{ item.name }} ({{item.latestPercentage}})</div>
       {% endfor %}
-    </ul>
+    </div>
 
     <footer class="text-xs text-gray-500 mt-12 border-t border-gray-100 pt-6">
       Based on data from <a href="https://www.caniuse.com">www.caniuse.com</a>, written by <a href="https://github.com/dmcclory">Dan McClory</a>
