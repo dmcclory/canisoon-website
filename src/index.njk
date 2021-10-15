@@ -6,17 +6,17 @@ description: Cool site
 
 <main id="main" class="p-6 md:p-12 lg:p-16 border-t-8 border-gray-200 bg-blue-200">
 	<div class="max-w-full bg-blue-100 px-4">
-  	<h1 class="font-bold text-xl mb-2 py-4">canisoon</span></h1>
-    <h2 class="text-lg mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
-    <p>features that are supported by 70 to 90% of all browsers<p>
+  	<h1 class="font-bold text-2xl mb-2 pt-4">canisoon</span></h1>
+    <h2 class="text-xl mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
+    <p class="pb-4">features that are supported by 70 to 90% of all browsers<p>
     <div class="grid grid-cols-3 gap-4">
       {% for item in simpleFeatures.optimal %}
       <div>{{ item.name }} ({{item.latestPercentage}})</div>
       {% endfor %}
     </div>
 
-    <h2 class="text-lg mb-2">😎 Upcoming browser that are pretty well established</h2>
-    <p>features that are supported by 90%+ of all browsers<p>
+    <h2 class="text-lg mb-2 pt-4">😎 Upcoming browser that are pretty well established</h2>
+    <p class="pt-4">features that are supported by 90%+ of all browsers<p>
     <div class="grid grid-cols-3 gap-4">
       {% for item in simpleFeatures.tooLate %}
       <div>{{ item.name }} ({{item.latestPercentage}})</div>
