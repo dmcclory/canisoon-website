@@ -10,25 +10,25 @@ description: Cool site
     <h2 class="text-lg mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
     <p>features that are supported by 70 to 90% of all browsers<p>
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {% for item in simpleFeatures.optimal %}
+      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      {% endfor %}
     </ul>
 
     <h2 class="text-lg mb-2">😎 Upcoming browser that are pretty well established</h2>
     <p>features that are supported by 90%+ of all browsers<p>
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {% for item in simpleFeatures.tooLate %}
+      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      {% endfor %}
     </ul>
 
     <h2 class="text-lg mb-2">🥱 Features that are still cooking.</h2>
     <p>features that are supported by less than 70% of all browsers<p>
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {% for item in simpleFeatures.tooEarly %}
+      <li>{{ item.name }} ({{item.latestPercentage}})</li>
+      {% endfor %}
     </ul>
 
     <footer class="text-xs text-gray-500 mt-12 border-t border-gray-100 pt-6">
