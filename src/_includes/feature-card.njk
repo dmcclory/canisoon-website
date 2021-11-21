@@ -1,0 +1,6 @@
+{% if item %}
+  <div class="rounded-md px-4 py-2 border-dashed border-gray-100 border-2 h-20 md:h-24 bg-gray-50 hover:bg-gray-200">
+    <div class="text-md">{{ item.name }}</div>
+    <div class="text-md">({{item.latestPercentage}})</div>
+  </div>
+{% endif %}

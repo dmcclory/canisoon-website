@@ -10,27 +10,18 @@ description: Cool site
 
     <h2 class="text-xl mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
     <p class="pb-4"> These features are supported by 70 to 90% of all browsers.<p>
-    <div class="grid grid-cols-3 gap-4">
-      {% for item in simpleFeatures.optimal %}
-      <div><span class="text-md">{{ item.name }} ({{item.latestPercentage}})</span></div>
-      {% endfor %}
-    </div>
+    {% set featureSet = simpleFeatures.optimal %}
+    {% include "feature-set.njk" %}
 
     <h2 class="text-lg mb-2 pt-4">😎 Pretty well established</h2>
     <p class="mb-4">These features that are supported by 90%+ of all browsers<p>
-    <div class="grid grid-cols-3 gap-4">
-      {% for item in simpleFeatures.tooLate %}
-       <div><span class="text-md">{{ item.name }} ({{item.latestPercentage}})</span></div>
-      {% endfor %}
-    </div>
+    {% set featureSet = simpleFeatures.tooLate %}
+    {% include "feature-set.njk" %}
 
     <h2 class="text-lg mb-2 pt-4">🥱 Still cooking.</h2>
     <p class="mb-4">These features that are supported by less than 70% of all browsers<p>
-    <div class="grid grid-cols-3 gap-4">
-      {% for item in simpleFeatures.tooEarly %}
-        <div> <span class="text-md">{{ item.name }} ({{item.latestPercentage}})</span></div>
-      {% endfor %}
-    </div>
+    {% set featureSet = simpleFeatures.tooEarly %}
+    {% include "feature-set.njk" %}
 
     <footer class="text-xs text-gray-500 mt-12 border-t border-gray-100 pt-6">
       Based on data from <a href="https://www.caniuse.com">www.caniuse.com</a>, written by <a href="https://github.com/dmcclory">Dan McClory</a>

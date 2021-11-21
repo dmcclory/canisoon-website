@@ -1,0 +1,7 @@
+{% if featureSet %}
+  <div class="grid md:grid-cols-3 gap-4">
+    {% for item in featureSet %}
+      {% include "feature-card.njk" %}
+    {% endfor %}
+  </div>
+{% endif %}
