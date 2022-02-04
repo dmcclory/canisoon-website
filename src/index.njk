@@ -1,22 +1,7 @@
 ---
 layout: base.njk
-title: Canisoon - see what browser features you should learn about next
-description: Cool site
+title: Canisoon - learn about upcoming browser features
 ---
 
-<h1 class="font-bold text-2xl mb-8 pt-4">canisoon</span></h1>
-
-<h2 class="text-xl mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
-<p class="pb-4"> These features are supported by 70 to 90% of all browsers.<p>
-{% set featureSet = simpleFeatures.optimal %}
-{% include "feature-set.njk" %}
-
-<h2 class="text-lg mb-2 pt-4">😎 Pretty well established</h2>
-<p class="mb-4">These features that are supported by 90%+ of all browsers<p>
-{% set featureSet = simpleFeatures.tooLate %}
-{% include "feature-set.njk" %}
-
-<h2 class="text-lg mb-2 pt-4">🥱 Still cooking.</h2>
-<p class="mb-4">These features that are supported by less than 70% of all browsers<p>
-{% set featureSet = simpleFeatures.tooEarly %}
-{% include "feature-set.njk" %}
+{%set features = simpleFeatures %}
+{% include "feature-set-list.njk" %}

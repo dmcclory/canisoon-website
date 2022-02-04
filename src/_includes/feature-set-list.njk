@@ -1,0 +1,16 @@
+{% if features %}
+  <h2 class="text-xl mb-2">🤓 Upcoming browser features that are worth getting to know soon</h2>
+  <p class="pb-4"> These {{features.optimal | length }} features are supported by 70 to 90% of all browsers.<p>
+  {% set featureSet = features.optimal %}
+  {% include "feature-set.njk" %}
+
+  <h2 class="text-lg mb-2 pt-4">😎 Pretty well established</h2>
+  <p class="mb-4">These {{features.tooLate | length }} features that are supported by 90%+ of all browsers<p>
+  {% set featureSet = features.tooLate %}
+  {% include "feature-set.njk" %}
+
+  <h2 class="text-lg mb-2 pt-4">🥱 Still cooking.</h2>
+  <p class="mb-4">These {{features.tooEarly | length }} features that are supported by less than 70% of all browsers<p>
+  {% set featureSet = features.tooEarly %}
+  {% include "feature-set.njk" %}
+{% endif %}

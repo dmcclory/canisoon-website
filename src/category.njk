@@ -4,7 +4,9 @@ pagination:
   data: categories
   size: 1
   alias: category
-permalink: "categories/{{ category | slug}}/"
+permalink: "categories/{{ category.name | slug}}/"
 ---
 
-this is a category page for: {{ category }}!!
+<h1 class="text-2xl pt-4 mb-4">{{ category.name }}</h1>
+{%set features = category.features %}
+{% include "feature-set-list.njk" %}
