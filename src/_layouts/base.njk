@@ -5,7 +5,7 @@
     {% if site.env %}
       <!-- capture the CSS content as a Liquid variable -->
       {% set css %}{% include "styles.min.css" %}{% endset %}
-      <style> 
+      <style>
         {{ css | safe }}
       </style>
     {% else %}
@@ -21,7 +21,14 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
-    {{ content | safe }}
+    <main id="main" class="p-6 md:p-12 lg:p-16 border-t-8 border-gray-200 bg-blue-200">
+      <div class="max-w-full bg-blue-100 px-4">
+        {{ content | safe }}
+      </div>
+      <footer class="text-xs text-gray-500 mt-12 border-t border-gray-100 pt-6">
+        Based on data from <a href="https://www.caniuse.com">www.caniuse.com</a>, written by <a href="https://github.com/dmcclory">Dan McClory</a>
+      </footer>
+    </main>
   </body>
   <script src="/static/app.min.js" defer></script>
 </html>
