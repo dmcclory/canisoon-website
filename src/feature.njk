@@ -1,0 +1,24 @@
+---
+layout: base.njk
+pagination:
+  data: features
+  size: 1
+  alias: feature
+permalink: "features/{{ feature.slug | slug}}/"
+---
+
+<h1 class="text-2xl pt-4">{{feature.name}}</h1>
+<h2 class="text-xl mb-2">{{feature.latestPercentage}}</h2>
+<div class="mb-4">
+  <p>{{feature.categories[0]}}</p>
+</div>
+
+<p>{{feature.description}}</p>
+
+<div id="wrapper" data-feature-history={{ feature.usageSnapshots | json }}>
+</div>
+
+<script type="module" src="/static/feature-chart.js">
+</script>
+
+<p>and then we'll put the links down here!<p>

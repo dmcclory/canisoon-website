@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
 	// Folders to copy to build dir (See. 1.1)
 	eleventyConfig.addPassthroughCopy("src/static");
 
-	// Filters 
+	// Filters
 	Object.keys(filters).forEach((filterName) => {
 		eleventyConfig.addFilter(filterName, filters[filterName])
 	})
@@ -20,6 +20,8 @@ module.exports = function (eleventyConfig) {
 	Object.keys(collections).forEach((collectionName) => {
 		eleventyConfig.addCollection(collectionName, collections[collectionName])
 	})
+
+	eleventyConfig.addFilter("json", function(data) { return JSON.stringify(data)});
 
 	// This allows Eleventy to watch for file changes during local development.
 	eleventyConfig.setUseGitIgnore(false);
