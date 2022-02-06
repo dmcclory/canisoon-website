@@ -1,0 +1,8 @@
+{% if category %}
+  <a
+    class="text-xs bg-purple-700 text-white no-underline py-1 px-2 rounded mr-2"
+    href="/categories/{{category | slug}}"
+  >
+    {{category}}
+  </a>
+{% endif %}

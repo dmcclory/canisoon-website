@@ -11,7 +11,9 @@ permalink: "features/{{ feature.slug | slug}}/"
   <h1 class="text-2xl pt-4">{{feature.name}}</h1>
   <h2 class="text-xl mb-2">{{feature.latestPercentage}}</h2>
   <div class="mb-4">
-    <p>{{feature.categories[0]}}</p>
+    {% for category in feature.categories %}
+      {% include "category-tag.njk" %}
+    {% endfor %}
   </div>
   <p>{{feature.description}}</p>
 </div>

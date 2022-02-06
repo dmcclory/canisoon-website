@@ -11,12 +11,7 @@
     <div class="text-md">({{item.latestPercentage}})</div>
     <div class="pt-1">
       {% for category in item.categories %}
-        <a
-          class="text-xs bg-purple-700 text-white no-underline py-1 px-2 rounded"
-          href="/categories/{{category | slug}}"
-        >
-          {{category}}
-        </a>
+        {% include "category-tag.njk" %}
       {% endfor %}
     </div>
   </div>
