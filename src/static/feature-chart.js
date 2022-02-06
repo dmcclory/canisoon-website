@@ -62,3 +62,16 @@ const line = bounds.append("path")
   .attr("fill", "none")
   .attr("stroke", "#6D28D9")
   .attr("stroke-width", 2)
+
+const yAxisGenerator = d3.axisLeft()
+  .scale(yScale)
+
+const yAxis = bounds.append("g").call(yAxisGenerator)
+
+const xAxisGenerator = d3.axisBottom()
+  .scale(xScale)
+
+const xAxis = bounds.append("g").call(xAxisGenerator)
+  .style("transform", `translateY(${
+    dimensions.boundedHeight
+  }px)`)
